@@ -6,7 +6,7 @@ on:
       service_name:
         description: 'Existing Baserock service identifier'
         required: false
-        default: 'todo-500'
+        default: 'todo-800'
       environment:
         description: 'Environment label passed to the agent'
         required: false
