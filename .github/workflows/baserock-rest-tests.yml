@@ -50,8 +50,8 @@ jobs:
           --health-timeout 5s
           --health-retries 5
     env:
-      BASEROCK_API_KEY: ${{ secrets[github.event.inputs.baserock_api_secret || 'BASEROCK_API_KEY'] }}
-      SERVICE_NAME: ${{ github.event.inputs.service_name || 'todo-600' }}
+      BASEROCK_CONTROL_PLANE: ${{ github.event.inputs.baserock_control_plane || 'https://app.baserock.ai/' }}
+      SERVICE_NAME: ${{ github.event.inputs.service_name || 'todo-800' }}
       SERVICE_UNDER_TEST_URL: ${{ github.event.inputs.service_url || 'http://127.0.0.1:8090' }}
       ENVIRONMENT: ${{ github.event.inputs.environment || 'prod' }}
       POSTGRES_PORT: 5432
