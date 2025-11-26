@@ -120,7 +120,7 @@ jobs:
           exit 1
       - name: Run Baserock agent tests
         env:
-          BASEROCK_API_KEY: ${{ secrets.BASEROCK_API_KEY }}
+          BASEROCK_API_KEY: ${{ secrets[github.event.inputs.baserock_api_secret || 'BASEROCK_API_KEY'] }}
         run: |
           if [ -z "$BASEROCK_API_KEY" ]; then
             echo "Missing BASEROCK_API_KEY secret."
